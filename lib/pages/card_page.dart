@@ -16,16 +16,21 @@ class CardPage extends StatelessWidget {
           height: 380,
           width: double.infinity,
           child: Card(
+              clipBehavior: Clip.antiAlias,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               elevation: 15,
-              shadowColor: Colors.pink,
+              shadowColor: Colors.blue,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    'https://p4.wallpaperbetter.com/wallpaper/346/493/314/cats-cat-wallpaper-preview.jpg',
-                    fit: BoxFit.cover,
-                    height: 220,
+                  const FadeInImage(
                     width: double.infinity,
+                    height: 200,
+                    fit: BoxFit.cover,
+                    placeholder: AssetImage('assets/images/loading.gif'),
+                    image: NetworkImage(
+                        'https://www.wallpaperuse.com/wallp/30-308384_m.jpg'),
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 10, left: 15),
