@@ -2,6 +2,7 @@ import 'package:contador/pages/card_page.dart';
 import 'package:contador/pages/contador_page.dart';
 import 'package:contador/pages/container_page.dart';
 import 'package:contador/pages/menu_page.dart';
+import 'package:contador/pages/stack_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -14,12 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'IDGS10-2',
-      initialRoute: '/card',
+      initialRoute: '/stack',
       routes: {
         '/menu': (context) => const MenuPage(),
         '/contador': (context) => const ContadorPage(),
         '/container': (context) => const ContainerPage(),
-        '/card': (context) => const CardPage()
+        '/card': (context) => const CardPage(),
+        '/stack': (context) => const StackPage()
       },
     );
   }

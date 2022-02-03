@@ -25,6 +25,20 @@ class MenuPage extends StatelessWidget {
             leading: const Icon(Icons.contact_mail, color: Colors.purple),
             title: const Text('Container'),
           ),
+          const Divider(),
+          ListTile(
+            onTap: () => Navigator.pushNamed(context, '/card'),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.purple),
+            leading: const Icon(Icons.contact_mail, color: Colors.purple),
+            title: const Text('Cartas'),
+          ),
+          ListTile(
+            onTap: () => Navigator.pushNamed(context, '/stack'),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.purple),
+            leading: const Icon(Icons.picture_in_picture_alt_sharp,
+                color: Colors.purple),
+            title: const Text('Stack'),
+          ),
         ],
       ),
     );
