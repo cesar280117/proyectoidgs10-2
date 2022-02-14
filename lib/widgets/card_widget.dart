@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  String urlImagen;
-  String titulo;
-  String descripcion;
-  Color? shadowColor;
+  final String urlImagen;
+  final String titulo;
+  final String descripcion;
+  final Color? shadowColor;
 
-  const CardWidget({
+  CardWidget({
     required this.urlImagen,
     required this.descripcion,
     required this.titulo,
