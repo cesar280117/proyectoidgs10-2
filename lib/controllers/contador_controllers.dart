@@ -1,15 +1,22 @@
 import 'package:get/get.dart';
 
 class ContadorControllers extends GetxController {
-  var valor = 0.obs;
+  int valor = 0;
 
-  void incrementar() => valor.value++;
+  void incrementar() {
+    valor++;
+    update();
+  }
 
   void decrementar() {
-    if (valor.value > 0) {
-      valor.value--;
+    if (valor > 0) {
+      valor--;
+      update();
     }
   }
 
-  void resetear() => valor.value = 0;
+  void resetear() {
+    valor = 0;
+    update();
+  }
 }
