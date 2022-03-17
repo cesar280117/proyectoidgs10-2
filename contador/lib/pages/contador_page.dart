@@ -9,7 +9,6 @@ class ContadorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,10 +17,12 @@ class ContadorPage extends StatelessWidget {
               'Numero actual del contador',
               style: TextStyle(fontSize: 20.0),
             ),
-           GetBuilder<ContadorControllers>(builder: (contadorController)=>Text(
+            GetBuilder<ContadorControllers>(
+              builder: (contadorController) => Text(
                 contadorController.valor.toString(),
                 style: const TextStyle(fontSize: 18.0),
-              ),)
+              ),
+            )
           ],
         ),
       ),
